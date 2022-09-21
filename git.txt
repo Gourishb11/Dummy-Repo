@@ -1,0 +1,59 @@
+git init
+git init .
+
+
+git add
+git add .
+git add --all
+git add <file-name>
+
+
+git status --> whr your files are there
+
+
+git log --> whether yiu committed or not
+
+
+git config --global user.name "<name>"
+git config --global user.email "<email>"  
+ 
+
+git commit -m "commit message"
+
+
+git diff --> comparing file from worksace to staging area
+
+git diff --staged   --> comparing staging area file to local repo
+
+git diff <commitID-1>  <commitID-2>  or git diff HEAD~1  HEAD~2 --> (read color added to file A, green color deleted from file A, White no chnage)
+
+git diff HEAD  --> comparing working directory with local repo
+
+
+When Repository is created on github
+git clone <remote-repo-URL>  --> cloning repo
+git push origin <remote-repo branch name>
+
+
+when repository is created on local system (or EC2)
+git remote add origin
+git push origin <remote-repo branch name>
+
+Git clone and Git pull --> Incase repository is not exist in your local system then git clone (only for 1st time - git clone)
+ 		       --> Repository is already cloned, now only changes needs to be pulled --> git pull
+
+
+ssh based authentication betweek local system and github  (searcch - connecting to github using sshss)
+  - Gnerate ssh key on local system -- ssh-keygen 
+  - run ssh agent on local system
+  - go to github - settings - add ssh & gpg key - paste the id_rsa.pub key copied from local sys
+
+
+git show --> (To check what are the changes introduced in the specific commit, Here no compsridion between 2 commits)
+	      git show <sha-code>  --> (sha code means complete commit ID) 
+       	       			   or
+	      git show HEAD~1 or 2...
+
+git unnotate  <filename>  --> shows who has change the file in linewise  (annotate = blame option in GitHub)
+
+git checkout <commit-ID>  --> checking out to perticular commit and start working there
